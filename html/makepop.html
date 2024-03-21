@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Create a synthetic population and, optionally, extend it over...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for makepop"><tr><td>makepop</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Create a synthetic population and, optionally, extend it over many months</h2>
+
+<h3>Description</h3>
+
+<p>Simulate a population based on parameters in &lsquo;<span class="file">parameters.R</span>&rsquo; and, optionally, make it evolve month by month for <code>L</code> months.
+</p>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>savefile</code></td>
+<td>
+<p>If <code>savefile=TRUE</code>, then an <code>.RData</code> file is saved. See the Value section below.</p>
+</td></tr>
+<tr valign="top"><td><code>L</code></td>
+<td>
+<p>The number of months of data to generate. The outputs for <code>L=1</code> and <code>L&gt;1</code> are different.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This program creates a population and makes it evolve over many months in a realistic way using transition probabilities defined in &lsquo;<span class="file">parameters.R</span>&rsquo;. The resulting time series for key variables (such as employment status) is made to follow an actual time series; the default time series are Canadian employment and unemployment series, but other series can be used. If <code>L&gt;1</code>, then the function <code>makemonth()</code> is called for each month 2, 3, ..., L.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The output depends on whether the number of months <code>L=1</code> or <code>L&gt;1</code>. When <code>L=1</code> (i.e., a single month of data) and <code>savefile=TRUE</code>, the file &lsquo;<span class="file">onemonth.RData</span>&rsquo; is created and it contains a population with characteristics age, sex, education, labour force status and income. The population is grouped into clusters which are themselves grouped into strata. If <code>L&gt;1</code> and <code>savefile=TRUE</code>, then the file &lsquo;<span class="file">allmonths.RData</span>&rsquo; is created. The key outputs in that file are three matrices: <code>empmat</code>, <code>unempmat</code> and <code>incmat</code>. Each row in a matrix corresponds to a person and each column to a month. Thus the value in row r, column c of <code>incmat</code> is the income for person r in month c. In addition, numerous other variables are included. In both cases, if  <code>savefile=FALSE</code>, an <code>.RData</code> is not created but the same variables appear in the current environment.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>parameters</code>, <code>makemonth</code>
+</p>
+
+
+</div></body></html>

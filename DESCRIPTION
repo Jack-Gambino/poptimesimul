@@ -1,0 +1,11 @@
+Package: poptimesimul
+Type: Package
+Title: Generate a Synthetic Longitudinal Population
+Version: 1.0.0
+Author: Jack Gambino <jack.gambino@gmail.com>
+Maintainer: Jack Gambino <jack.gambino@gmail.com>
+Description: poptimesimul generates a synthetic population with enough structure for survey statisticians and students to use the population to (1) illustrate existing sampling and estimation methods and (2) try out new methods in a realistic setting. The population includes some basic static variables (age, sex, education level) and both discrete (labour force status) and continuous (income) analysis variables that change over time. The population evolves over many months in a way that is sufficiently realistic for the above two goals.
+License: GPL-3
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+Depends: R (>= 3.5.0)

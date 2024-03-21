@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Set parameters for a synthetic population</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for parameters"><tr><td>parameters</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Set parameters for a synthetic population
+</h2>
+
+<h3>Description</h3>
+
+<p>The parameters used by the <code>poptimesimul</code> programs are set in this file.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The global parameters used when creating a population are set in the file &lsquo;<span class="file">parameters.R</span>&rsquo;. This file is <code>source</code>d by the main program <code>makepop.R</code>. The default values of the parameters are in parentheses.
+</p>
+
+<ul>
+<li><p> M0: average number of people per cluster (400)
+</p>
+</li>
+<li><p> H: number of strata (10)
+</p>
+</li>
+<li><p> C: a vector of length H indicating the number of clusters for
+each stratum (75, 75, 75, 75, 80, 80, 80, 75, 75, 100)
+</p>
+</li>
+<li><p> L: the number of months of data (120); the cases <code>L=1</code> and <code>L&gt;1</code> are different
+</p>
+</li>
+<li><p> age-sex probabilities based on U.S. census data
+</p>
+</li>
+<li><p> employment and unemployment ratios by age-sex, based on Canadian
+survey data
+</p>
+</li>
+<li><p> education level: 1 = no high school diploma, ..., 4 = university degree,
+based on Canadian survey data
+</p>
+</li>
+<li><p> meaninc: overall mean annual income in thousands of dollars (50)
+</p>
+</li>
+<li><p> meaniccvar: overall mean for an income-like variable (50)
+</p>
+</li>
+<li><p> transition probabilities for change from employed to unemployed,
+etc. (based on Canadian survey data; only used if
+<code>L&gt;1</code>)
+</p>
+</li></ul>
+
+
+
+<h3>Value</h3>
+
+<p>This program defines many variables that are then used by <code>makepop.R</code>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>makepop</code>
+</p>
+
+
+</div></body></html>

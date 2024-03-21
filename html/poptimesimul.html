@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Generate a synthetic longitudinal population useful for...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for poptimesimul"><tr><td>poptimesimul</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Generate a synthetic longitudinal population useful for sample survey methods research and education
+</h2>
+
+<h3>Description</h3>
+
+<p><span class="pkg">poptimesimul</span> generates a synthetic population with enough structure to make it possible for survey statisticians and students to use the population
+to (1) illustrate existing sampling and estimation methods and (2) try
+out new methods in a realistic setting. The population includes some basic static variables (age, sex, education level) and both discrete (labour force status) and continuous (income) analysis variables that change over time. The population evolves over many months in a way that is sufficiently realistic for the above two goals.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The main program is <code>makepop.R</code>, which creates an initial population (a snapshot of the population at month 1) and then optionally makes the population evolve over <code>L</code> months (<code>L=120</code> by default). Users who are not interested in longitudinal data can set <code>L=1</code>. Conversely, users who need many monthly snapshots of the population should set  <code>L</code> to a value greater than <code>1</code>. By default, <code>L=120</code>, i.e., ten years of monthly data. If the user wants <code>L&gt;120</code>, then some changes are required since the program depends on an auxiliary file containing real data and the one in the package has 120 months of data.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The output of <code>makepop.R</code> when <code>L=1</code> is an .RData file containing a population with characteristics age, sex, education, labour force status and income. The population is grouped into clusters which are themselves grouped into strata. The output of <code>makepop.R</code> when <code>L&gt;1</code> is a population file that is extended over <code>L</code>  months; see makepop for more information about how the data is stored.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Jack Gambino
+</p>
+
+
+<h3>References</h3>
+
+<p>The article <em>poptimesimul: R Programs for Generating a Longitudinal Synthetic Population for Educational and Research Purposes</em> explains in detail the populations and how they can be used. See <code>poptimesimul_article.pdf</code> in the doc directory.</p>
+
+
+<h3>See Also</h3>
+
+<p><code>makepop</code>
+</p>
+
+
+</div></body></html>

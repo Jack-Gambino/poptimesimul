@@ -1,0 +1,3 @@
+importFrom("stats", "rnorm", "runif", "var")
+importFrom("stats", "rgamma")
+importFrom("utils", "read.table")
