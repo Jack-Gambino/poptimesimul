@@ -1,0 +1,19 @@
+What to do after downloading the poptimesimul directory from github:
+
+[1]
+- unzip it 
+- run RStudio and set the working directory to the above 
+  (Session > Set Working Directory)
+- in the Files tab, go into the R subdirectory (you should see directories
+  called analyze, doc, etc.
+- load makepop.R and set L <- 1 (the default is value of L is 120)
+- Source makepop.R to create a population file
+- in the Files tab go back up one directory and enter the analyze directory
+- load analyze.R
+- step through it line by line to get to know the population
+
+[2]
+Read QuickStart.pdf in the doc directory. When you have time,
+read poptimesimul_article.pdf in the same directory.
+
+[3] Re-do [1] with L <- 120 and analyze_time_series.R
