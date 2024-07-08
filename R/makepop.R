@@ -6,7 +6,7 @@
 # Some useful little functions are defined in functions.R
 
 savefile = TRUE
-L = 120
+L <- 120
 # set savefile to TRUE to create file allmonths.RData (if L>1)
 # or onemonth.RData (if L==1)
 
